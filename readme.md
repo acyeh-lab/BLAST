@@ -46,9 +46,9 @@ Note the input parameters of blastp
 
 A sample query output with "-outfmt 6":
 | sequence | database | Uniprot Accesion# | Source (Bac) | %ID |Alignment length | Mismatch | Gap Openings | Query Start | Query End | Sequence Start | Sequence End | Match (E-value) | prob(alignment) | Alignment Quality | 
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Query1 | tr|A0A1B1SA89|A0A1B1SA89_9BACT | 100.000 | 10 | 0 | 0 | 1 | 10 | 199 | 208 | 0.43 | 21.2
-| Query1 | tr|A0A1B1S6U0|A0A1B1S6U0_9BACT | 62.500 | 8 | 3 | 0 | 2 | 9 | 241 | 248 | 9.8 | 17.3
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Query1 | tr | A0A1B1SA89 | A0A1B1SA89_9BACT | 100.000 | 10 | 0 | 0 | 1 | 10 | 199 | 208 | 0.43 | 21.2
+| Query1 | tr | A0A1B1S6U0 | A0A1B1S6U0_9BACT | 62.500 | 8 | 3 | 0 | 2 | 9 | 241 | 248 | 9.8 | 17.3
 
 Note that tr| indicates this is a TrEMBL (unreviewed) UniProt sequence.
 

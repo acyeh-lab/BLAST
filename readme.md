@@ -14,6 +14,6 @@ module load BLAST+/2.14.0-gompi-2022b
 To construct a BLAST database, one option is to download a FASTA file from Uniprot.  For example, for the _Mus musculus_ database, visit the Uniprot webpage "https://www.uniprot.org/proteomes/UP000000589", and select the option next to "Gene Count" and "Download one protein sequence per gene (FASTA)".  This should download the file 'UP000000589_10090.fasta.gz'.  
 
 Next, upload this file into a specified directory, for example, "/fh/fast/hill_g/Albert/Genomes_Proteomes/Murine_Sequences/proteomes/UP000000598_10090_Mus_musculus".  To unzip, input the command (while in the directory):
-'''
+```
 gunzip UP000000589_10090.fasta.gz
 ```

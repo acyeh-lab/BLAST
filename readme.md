@@ -21,10 +21,27 @@ In terminal, run the following command to generate the database:
 ```
 makeblastdb -in UP000000589_10090.fasta -dbtype prot -out UP000000589_10090_db
 ```
-Note  
+Note the input parameters of makeblastdb
 -in: The input FASTA file.  
 -dbtype prot: Indicates the database contains protein sequences. Use nucl if it's nucleotide sequences.  
 -out: The name of the output database files (e.g., UP000000589_10090_db).  
 
 This will create 8 files, ending in ".pdb", ".phr", ".pin", ".pjs", ",pot", ".psq", ".ptf"., ".pto".  These are different components necessary for the BLAST search.
+
+# BLASTing a peptide
+Create a sample file “query.fasta” with the following simple text:
+```
+>Query1
+IIPILGEGLL
+```
+Now, in the same directory, run the following command:
+```
+blastp -query query.fasta -db UP000186351_db -out results.txt -outfmt 6
+```
+Note the input parameters of blastp
+-query query.fasta: Specifies the input file containing the query sequence.
+-db UP000000589_10090_db: Specifies the BLAST database you created.
+-out results.txt: Specifies the output file where results will be written.
+-outfmt 6: Outputs the results in tabular format for easier parsing. You can modify this format if needed. 6 is clean; 7 has more information, for example.
+
 

@@ -17,10 +17,14 @@ Next, upload this file into a specified directory, for example, "/fh/fast/hill_g
 ```
 gunzip UP000000589_10090.fasta.gz
 ```
-
-In terminal, run the shell command:
+In terminal, run the following command to generate the database:
 ```
 makeblastdb -in UP000000589_10090.fasta -dbtype prot -out UP000000589_10090_db
 ```
-This will create 7 files, ending in ".pdb", ".phr", ".pin", ".pjs", ",pot", ".psq", ".ptf"., ".pto".  These are different components necessary for the BLAST search.
+Note  
+-in: The input FASTA file.  
+-dbtype prot: Indicates the database contains protein sequences. Use nucl if it's nucleotide sequences.  
+-out: The name of the output database files (e.g., UP000000589_10090_db).  
+
+This will create 8 files, ending in ".pdb", ".phr", ".pin", ".pjs", ",pot", ".psq", ".ptf"., ".pto".  These are different components necessary for the BLAST search.
 

@@ -11,7 +11,7 @@ module load BLAST+/2.14.0-gompi-2022b
 ```
 
 # Construct BLAST Database
-To construct a BLAST database, one option is to download a FASTA file from Uniprot.  For example, if we want to use the _Mus musculus_ database, visit the Uniprot webpage "https://www.uniprot.org/proteomes/UP000000589", and select the option next to "Gene Count" and "Download one protein sequence per gene (FASTA)".  This should download the file 'UP000000589_10090.fasta.gz'.  
+To construct a BLAST database, one option is to download a FASTA file from Uniprot.  For example, if we want to use the _Mus musculus_ database, visit the Uniprot webpage "https://www.uniprot.org/proteomes/UP000000589", and select the option next to "Gene Count" and "Download one protein sequence per gene (FASTA)".  This should download the file 'UP000000589_10090.fasta.gz'.  If we have an assembled genome (but not on uniprot), we can download this at "https://www.ncbi.nlm.nih.gov/datasets/genome/" (note that peptides can also be blasted against the genome - more on that later!).
 
 Next, upload this file into a specified directory, for example, "/fh/fast/hill_g/Albert/Genomes_Proteomes/Murine_Sequences/proteomes/UP000000598_10090_Mus_musculus".  To unzip, input the command (while in the directory):
 ```
@@ -43,6 +43,12 @@ Note the input parameters of blastp
 -db UP000000589_10090_db: Specifies the BLAST database you created.
 -out results.txt: Specifies the output file where results will be written.
 -outfmt 6: Outputs the results in tabular format for easier parsing. You can modify this format if needed. 6 is clean; 7 has more information, for example.
+
+If we are blasting against a genome and not a proteome, we can still use the same peptide file:
+```
+tblastn -query query.fasta -db UP000186351_db -out results.txt -outfmt 6
+```
+
 
 A sample query output with "-outfmt 6":
 | sequence | database | Uniprot Accesion# | Source (Bac) | %ID |Alignment length | Mismatch | Gap Openings | Query Start | Query End | Sequence Start | Sequence End | Match (E-value) | prob(alignment) | Alignment Quality | 
